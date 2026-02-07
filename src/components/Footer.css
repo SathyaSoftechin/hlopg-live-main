@@ -68,7 +68,7 @@
   color: #007bff;
 }
 
-/* Social Media on RIGHT */
+/* Social Media on RIGHT - WHITE ICONS NO BACKGROUND */
 .footer-socials {
   display: flex;
   align-items: center;
@@ -80,36 +80,29 @@
   font-size: 20px;
   margin: 0;
   white-space: nowrap;
-  transition: 0.3s ease;
 }
 
-.socialmedia:hover {
-  color: #aaa;;
-}
-
-/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Increased gap */
 }
 
 .social-icons a {
-  color: #fff;
+  color: #fff; /* White color */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 20px; /* Larger icons */
   text-decoration: none;
   transition: 0.3s ease;
-  background: transparent !important;
-  width: auto !important;
-  height: 20px !important;
+  background: white !important; /* Remove background */
+  width: auto !important; /* Remove fixed width */
+  height: 20px !important; /* Remove fixed height */
 }
 
 .social-icons a:hover {
-  color: #007bff;
-  transform: translateY(-3px) scale(1.1);
-  filter: drop-shadow(0px 0px 8px rgba(0, 123, 255, 0.7));
+  color: #7b61ff; /* Change color on hover */
+  transform: translateY(-2px);
 }
 
 /* ========== CONTENT ROW ========== */
