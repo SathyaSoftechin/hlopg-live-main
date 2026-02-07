@@ -218,9 +218,12 @@
 /* ================= Auth Section ================= */
 .auth-section {
   display: flex;
+  flex-direction: row;   /* ✅ FORCE SIDE BY SIDE */
   align-items: center;
+  justify-content: center;
   margin-left: 60px;
-  gap: 18px; /* ✅ PERFECT GAP BETWEEN LOGIN & SIGNUP */
+  gap: 15px;             /* ✅ GAP BETWEEN BUTTONS */
+  flex-wrap: nowrap;     /* ✅ PREVENT STACKING */
 }
 
 .login-btn,
@@ -235,7 +238,7 @@
   font-size: 16px !important;
   white-space: nowrap !important;
   transition: all 0.3s ease !important;
-  display: flex !important; /* ✅ FIX ALIGNMENT */
+  display: inline-flex !important; /* ✅ FIX ALIGNMENT */
   align-items: center !important;
   justify-content: center !important;
   text-decoration: none !important;
