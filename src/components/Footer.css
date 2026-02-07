@@ -1,4 +1,4 @@
-/* Footer.css - FINAL CORRECTED VERSION */
+/* Footer.css - FINAL CORRECTED VERSION WITH FULL BLUE HOVER EFFECT */
 
 /* ================= FOOTER ================= */
 .footer {
@@ -9,12 +9,18 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   border: 1px solid black;
   border-radius: 20px;
+  transition: 0.3s ease;
 }
 
+.footer:hover {
+  border: 1px solid #007bff;
+  box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* ================= FOOTER CONTAINER ================= */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 /* ========== TOP ROW: Logo + Social Media ========== */
@@ -32,11 +38,22 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
 }
 
 .footer-logo img {
   width: 40px;
   height: 40px;
+  transition: 0.3s ease;
+}
+
+.footer-logo:hover img {
+  filter: drop-shadow(0px 0px 8px #007bff);
 }
 
 .footer-logo h2 {
@@ -44,9 +61,14 @@
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.5px;
+  transition: 0.3s ease;
 }
 
-/* Social Media on RIGHT - WHITE ICONS NO BACKGROUND */
+.footer-logo:hover h2 {
+  color: #007bff;
+}
+
+/* Social Media on RIGHT */
 .footer-socials {
   display: flex;
   align-items: center;
@@ -58,36 +80,43 @@
   font-size: 20px;
   margin: 0;
   white-space: nowrap;
+  transition: 0.3s ease;
 }
 
+.socialmedia:hover {
+  color: #007bff;
+}
+
+/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
 }
 
 .social-icons a {
-  color: #fff; /* White color */
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px; /* Larger icons */
+  font-size: 20px;
   text-decoration: none;
   transition: 0.3s ease;
-  background: white !important; /* Remove background */
-  width: auto !important; /* Remove fixed width */
-  height: 20px !important; /* Remove fixed height */
+  background: transparent !important;
+  width: auto !important;
+  height: 20px !important;
 }
 
 .social-icons a:hover {
-  color: #7b61ff; /* Change color on hover */
-  transform: translateY(-2px);
+  color: #007bff;
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0px 0px 8px rgba(0, 123, 255, 0.7));
 }
 
-/* ========== CONTENT ROW - ALL SECTIONS TOP ALIGNED ========== */
+/* ========== CONTENT ROW ========== */
 .content-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align all items to top */
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 30px;
@@ -95,7 +124,7 @@
   border-bottom: 1px solid #333;
 }
 
-/* Left Section - Description */
+/* Left Section */
 .footer-left {
   flex: 1;
   min-width: 300px;
@@ -108,6 +137,12 @@
   margin: 0;
   margin-top: 25px;
   max-width: 400px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-description:hover {
+  color: #007bff;
 }
 
 /* Middle Section - Links */
@@ -115,7 +150,7 @@
   flex: 1.5;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align to top */
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
   min-width: 400px;
@@ -131,6 +166,13 @@
   margin-bottom: 20px;
   font-weight: 600;
   color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-links h4:hover {
+  color: #007bff;
+  transform: translateX(5px);
 }
 
 .footer-links ul {
@@ -143,17 +185,25 @@
   margin-bottom: 12px;
   color: #aaa;
   font-size: 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #007bff;
+  transform: translateX(8px);
 }
 
 .footer-links a {
   color: #aaa;
   font-size: 14px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: #007bff;
+  text-shadow: 0px 0px 8px rgba(0, 123, 255, 0.7);
 }
 
 /* ========== RIGHT SECTION - GET THE APP ========== */
@@ -162,7 +212,17 @@
   min-width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align to top */
+  align-items: flex-start;
+}
+
+.footer-right h4 {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-right h4:hover {
+  color: #007bff;
+  transform: translateX(5px);
 }
 
 .store-buttons {
@@ -185,31 +245,44 @@
   font-size: 14px;
   transition: 0.3s ease;
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   text-align: left;
 }
 
 .store-btn:hover {
-  background: #7b61ff;
+  background: #007bff;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  border: 1px solid #007bff;
+  box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.6);
 }
 
 .store-btn svg {
   font-size: 22px;
+  transition: 0.3s ease;
 }
 
-/* Make "Apple Store" and "Google Play Store" bold */
+.store-btn:hover svg {
+  transform: scale(1.2);
+}
+
 .store-btn strong {
   font-weight: 700;
 }
 
+/* Store Text */
 .store-text {
   color: #bbb;
   font-size: 13px;
   margin: 10px 0 0 0;
   line-height: 1.5;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.store-text:hover {
+  color: #007bff;
 }
 
 /* ========== BOTTOM SECTION ========== */
@@ -221,6 +294,13 @@
 
 .footer-bottom p {
   margin: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-bottom p:hover {
+  color: #007bff;
+  text-shadow: 0px 0px 10px rgba(0, 123, 255, 0.7);
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -271,6 +351,10 @@
     margin: 0;
   }
 
+  .socialmedia:hover {
+    color: #007bff;
+  }
+
   .social-icons {
     display: flex;
     gap: 15px;
@@ -278,7 +362,7 @@
 
   .social-icons a {
     color: #fff;
-    background: beige !important;
+    background: transparent !important;
     width: 36px !important;
     height: 36px !important;
     display: flex;
@@ -291,10 +375,11 @@
   }
 
   .social-icons a:hover {
-    background: #7b61ff !important;
-    border-color: #7b61ff;
+    background: #007bff !important;
+    border-color: #007bff;
     color: white !important;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.7);
   }
 
   /* ========== CONTENT ROW MOBILE ========== */
@@ -318,6 +403,10 @@
     width: 350px;
   }
 
+  .footer-description:hover {
+    color: #007bff;
+  }
+
   .footer-links {
     min-width: 100%;
     flex-direction: column;
@@ -336,6 +425,11 @@
     font-weight: 600;
   }
 
+  .footer-links h4:hover {
+    color: #007bff;
+    transform: translateX(5px);
+  }
+
   .footer-links ul {
     display: flex;
     flex-direction: column;
@@ -348,7 +442,12 @@
     color: #ccc;
   }
 
-  /* ========== GET THE APP SECTION - FIXED ========== */
+  .footer-links li:hover {
+    color: #007bff;
+    transform: translateX(8px);
+  }
+
+  /* ========== GET THE APP SECTION ========== */
   .footer-right {
     min-width: 100%;
     order: 2;
@@ -360,6 +459,10 @@
     margin-bottom: 15px;
     color: #fff;
     font-weight: 600;
+  }
+
+  .footer-right h4:hover {
+    color: #007bff;
   }
 
   .store-buttons {
@@ -385,10 +488,11 @@
   }
 
   .store-btn:hover {
-    background: #7b61ff;
+    background: #007bff;
     color: #fff;
-    transform: translateY(-2px);
-    border-color: #7b61ff;
+    transform: translateY(-3px) scale(1.05);
+    border-color: #007bff;
+    box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.7);
   }
 
   .store-btn svg {
@@ -401,7 +505,7 @@
     margin-left: 4px;
   }
 
-  /* Remove the store-text if it exists */
+  /* Hide store text */
   .store-text {
     display: none;
   }
@@ -417,6 +521,10 @@
     color: #aaa;
     line-height: 1.4;
     text-align: center;
+  }
+
+  .footer-bottom p:hover {
+    color: #007bff;
   }
 }
 
