@@ -50,24 +50,40 @@ function Home() {
 const forceUpdate = () => setForceUpdateFlag(!forceUpdateFlag);
 
   /* ---------------- Fix Image URL Helper ---------------- */
-  const getFullImageUrl = (imagePath) => {
-    if (!imagePath) return defaultPGImg;
+  // const getFullImageUrl = (imagePath) => {
+  //   if (!imagePath) return defaultPGImg;
     
-    if (imagePath.startsWith('http')) {
-      return imagePath;
-    }
+  //   if (imagePath.startsWith('http')) {
+  //     return imagePath;
+  //   }
     
-    if (imagePath.startsWith('/uploads')) {
-      return `https://hlopg.com${imagePath}`;
-    }
+  //   if (imagePath.startsWith('/uploads')) {
+  //     return `https://hlopg.com${imagePath}`;
+  //   }
     
-    if (imagePath) {
-      return `https://hlopg.com/uploads/${imagePath}`;
-    }
+  //   if (imagePath) {
+  //     return `https://hlopg.com/uploads/${imagePath}`;
+  //   }
     
-    return defaultPGImg;
-  };
-
+  //   return defaultPGImg;
+  // };
+const getFullImageUrl = (imagePath) => {
+  if (!imagePath) return defaultPGImg;
+ 
+  // Already a full URL
+  if (imagePath.startsWith("http")) {
+    return imagePath;
+  }
+ 
+  // Remove leading slash if present
+  const cleanPath = imagePath.startsWith("/")
+    ? imagePath.substring(1)
+    : imagePath;
+ 
+  // Final full URL
+  return `https://hlopg.com/${cleanPath}`;
+};
+ 
   /* ---------------- Fetch Hostels ---------------- */
   useEffect(() => {
     const fetchData = async () => {
