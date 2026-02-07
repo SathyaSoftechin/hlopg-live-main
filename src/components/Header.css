@@ -220,7 +220,7 @@
   display: flex;
   align-items: center;
   margin-left: 60px;
-  gap: 20px;
+  gap: 18px; /* ✅ PERFECT GAP BETWEEN LOGIN & SIGNUP */
 }
 
 .login-btn,
@@ -235,7 +235,9 @@
   font-size: 16px !important;
   white-space: nowrap !important;
   transition: all 0.3s ease !important;
-  display: inline-block !important;
+  display: flex !important; /* ✅ FIX ALIGNMENT */
+  align-items: center !important;
+  justify-content: center !important;
   text-decoration: none !important;
   font-family: "Inter", sans-serif !important;
 }
