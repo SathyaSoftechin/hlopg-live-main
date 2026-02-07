@@ -273,6 +273,15 @@ function Home() {
               state: h.state,
               rules: [],
               food_menu: h.food_menu || {},
+
+              // ✅ OWNER NAME FIX ADDED HERE
+              ownerName:
+                h.owner_name ||
+                h.ownerName ||
+                h.user_name ||
+                h.username ||
+                h.owner ||
+                "Owner Not Found",
             })),
           };
         })
@@ -554,6 +563,11 @@ function Home() {
 
                               <p className="pg-location new-location">
                                 {pg.location}, {pg.city || ""}
+                              </p>
+
+                              {/* ✅ OWNER DISPLAY ADDED HERE */}
+                              <p className="pg-owner">
+                                <b>Owner:</b> {pg.ownerName}
                               </p>
 
                               {pg.pg_type && (
