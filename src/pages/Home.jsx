@@ -71,7 +71,7 @@ const getFullImageUrl = (imagePath) => {
   if (!imagePath) return defaultPGImg;
  
   // Already a full URL
-  if (imagePath.startsWith("http")) {
+  if (imagePath.startsWith("https")) {
     return imagePath;
   }
  
