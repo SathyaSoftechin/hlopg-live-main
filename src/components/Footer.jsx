@@ -122,8 +122,7 @@
 //       </div>
 //     </footer>
 //   );
-// };
-import React from "react";
+// };                                                                                                                                        import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import {
@@ -181,12 +180,23 @@ const Footer = () => {
             <div>
               <h4>Top Cities</h4>
               <ul>
-                <li>Hyderabad</li>
-                <li>Chennai</li>
-                <li>Bangalore</li>
-                <li>Delhi</li>
-                <li>Mumbai</li>
-              </ul>
+  <li>
+    <Link to="/city/Hyderabad">Hyderabad</Link>
+  </li>
+  <li>
+    <Link to="/city/Chennai">Chennai</Link>
+  </li>
+  <li>
+    <Link to="/city/Bangalore">Bangalore</Link>
+  </li>
+  <li>
+    <Link to="/city/Delhi">Delhi</Link>
+  </li>
+  <li>
+    <Link to="/city/Mumbai">Mumbai</Link>
+  </li>
+</ul>
+ 
             </div>
  
             {/* Quick Links Column */}
@@ -266,3 +276,4 @@ const Footer = () => {
 };
  
 export default Footer;
+ 
